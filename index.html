@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Start Survey</title>
+  <style>
+    body {
+      background: white;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .start-button {
+      padding: 15px 30px;
+      font-size: 24px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .start-button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="start-button" onclick="randomRedirect()">Begin with the Survey</button>
+
+  <script>
+    function randomRedirect() {
+      const urlA = "gamificationsurvey1.netlify.app"; // 🔥 Replace with your first URL
+      const urlB = "gamificationsurvey.netlify.app"; // 🔥 Replace with your second URL
+
+      const chosenUrl = Math.random() < 0.5 ? urlA : urlB;
+      window.location.href = chosenUrl;
+    }
+  </script>
+
+</body>
+</html>
